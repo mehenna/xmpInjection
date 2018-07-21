@@ -40,8 +40,12 @@
 			|--> git init
 	2. Add the files in your new local repository. This stages them for the first commit.
 			|--> git add .
-	3. Commit the files that you've staged in your local repository.
+			
+	3. Conf && Commit the files that you've staged in your local repository.
+			|--> git config --global user.email "mehenna.missoum@gmail.com"
+			|--> git config --global user.name "mehenna"
 			|--> git commit -m "First commit"
+			
 	4. At the top of your GitHub repository's Quick Setup page, click to copy the remote repository URL. 
 	5. In the Command prompt, add the URL for the remote repository where your local repository will be pushed
 			|-->  git remote add origin remote repository URL   (Sets the new remote)
