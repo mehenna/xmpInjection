@@ -1,0 +1,59 @@
+#####################################################
+###################     MAVEN     ###################
+#####################################################
+# 1. Check dependancy tree maven 
+		mvn dependency:tree -X    ----> Comment : -Dverbose is deprecated
+# 2. Maven life cycle 
+         -> Maven is based around the central concept of a build lifecycle
+		     This means is that the process for building and distributing 
+		        a particular artifact (project) is clearly defined.
+		 -> So, it is only necessary to learn a small set of commands to build any Maven project,
+				and the POM will ensure they get the results they desired.
+				
+		 -> There are three built-in build lifecycles: 
+				1 -> default : handles the project deployment
+				2 -> clean  : handles project cleaning
+				3 -> site : handles the creation of project's site documentation.
+				
+		 -> A Build Lifecycle is Made Up of Phases
+		       Each of these build lifecycles is defined by a different list of build phases,
+			   wherein a build phase represents a stage in the lifecycle.
+		    
+			Example, the default lifecycle comprises of the following phases :
+				. validate : validate the project is correct and all necessary information is available
+				. compile  : compile the source code of the project
+				. test     : test the compiled source code using a suitable unit testing framework.
+				. package  : take the compiled code and package it in its distributable format, such as a JAR.
+				. verify   : run any checks on results of integration tests to ensure quality criteria are met
+				. install  : install the package into the local repository, for use as a dependency in other projects locally
+				. deploy   : copies the final package to the remote repository for sharing with others.
+		 
+		 -> A Build Phase is Made Up of Plugin Goals :
+
+
+#####################################################
+###################     GIT       ###################
+#####################################################		 
+		 
+# 1. Adding a project to GitHub		 
+	1. Initialize the local directory as a Git repository 
+			|--> git init
+	2. Add the files in your new local repository. This stages them for the first commit.
+			|--> git add .
+	3. Commit the files that you've staged in your local repository.
+			|--> git commit -m "First commit"
+	4. At the top of your GitHub repository's Quick Setup page, click to copy the remote repository URL. 
+	5. In the Command prompt, add the URL for the remote repository where your local repository will be pushed
+			|-->  git remote add origin remote repository URL   (Sets the new remote)
+			|-->  git remote -v (Verifies the new remote URL)
+	6. Push the changes in your local repository to GitHub.
+			|-->  git push origin master
+
+		 
+
+		 
+Lien a supprimer : https://www.intertech.com/Blog/jaxb-tutorial-how-to-marshal-and-unmarshal-xml/
+
+
+
+		 
