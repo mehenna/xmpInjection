@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://benchresources.in/entities/sgi" xmlns:tns="http://benchresources.in/entities/sgi"
+	elementFormDefault="qualified">
+	
+	<!-- Metadonnées element -->
+	<xsd:element name="metadonnees" type="tns:metadonneesType" />
+	<!-- Evolution : ajout des Metadonnées aux PDF compsés par le web service -->
+	<xsd:complexType name="metadonneesType">
+		<xsd:sequence>
+			<xsd:element name="metadonneesEnsemble" type="tns:metadonneesEnsembleType" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+	</xsd:complexType>
+	<!-- metadonneesEnsembleType -->
+	<xsd:complexType name="metadonneesEnsembleType">
+		<xsd:sequence>
+			<xsd:element name="metadonnee" type="tns:metadonneeType" minOccurs="1" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute type="xsd:string" name="id"  use="required" />
+		<xsd:attribute type="xsd:string" name="name"  use="required" />
+	</xsd:complexType>
+	<!-- metadonneeType  -->
+	<xsd:complexType name="metadonneeType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="name" type="xsd:string" use="required" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>

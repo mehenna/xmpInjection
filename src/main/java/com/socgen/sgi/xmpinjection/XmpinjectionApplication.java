@@ -1,5 +1,7 @@
 package com.socgen.sgi.xmpinjection;
 
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.Banner;
 import org.springframework.boot.CommandLineRunner;
@@ -22,7 +24,20 @@ public class XmpinjectionApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		consum.consumfils(args);
+		System.out.println("-----------------------------------------------------");
+		if (Arrays.asList(args)!=null && args.length > 0 ) {
+			consum.consumfils(args);
+			System.out.println("-----------------------------------------------------");
+			System.out.println(args[2]);
+			System.out.println("-----------------------------------------------------");
+			
+			//consum.consumXml(args[2]);
+			consum.consumXml("");
+			
+		}else {
+			
+		}
+
 	}
 
 }

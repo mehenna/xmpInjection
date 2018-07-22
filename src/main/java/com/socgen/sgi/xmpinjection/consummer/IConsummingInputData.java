@@ -8,4 +8,6 @@ public interface IConsummingInputData {
 	public void consum(String ...strings); 
 	
 	public void consumfils(String ...strings)throws Exception ;
+	
+	public void consumXml(String  xml)throws Exception ;
 }
